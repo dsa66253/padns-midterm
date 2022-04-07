@@ -94,7 +94,7 @@ app.get("/api/csrf", (req, res) => {
   } else {
     req.session.view = 0;
   }
-  res.append("X-XSRF-Token", req.csrfToken());
+  res.cookie("X-XSRF-TOKEN", req.csrfToken());
   // if (firstTime) {
   //   res.json({ status: "again" });
   // } else {
