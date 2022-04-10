@@ -1,11 +1,23 @@
-const express = require("express");
-const path = require("path");
+// const express = require("express");
+// const path = require("path");
 // const bodyParser = require("body-parser");
-const session = require("express-session");
-const cors = require("cors");
-const csrf = require("csurf");
+// const session = require("express-session");
+// const cors = require("cors");
+// const csrf = require("csurf");
 // const { User } = require("./models");
-const { api } = require("./routes");
+import {User} from "./models/index.js"
+// const { api } = require("./routes");
+import {api} from "./routes/index.js"
+import express from "express"
+import path from "path"
+import bodyParser from "body-parser"
+import session from "express-session"
+import cors from "cors"
+import csrf from "csurf"
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+console.log(import.meta)
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const port = process.env.PORT || 3001;
 const API_DEV = {

@@ -30,5 +30,5 @@ api.get("/comments", Comment.getAll);
 api.get("/comments/:commentid", Comment.get);
 api.post("/comments", Comment.create);
 api.delete("/comments", Comment.del);
-
-module.exports = { api };
+export {api}
+// module.exports = { api };

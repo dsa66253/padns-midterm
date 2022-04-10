@@ -1,4 +1,6 @@
-const { Sequelize, Model, DataTypes } = require("sequelize");
+// const { Sequelize, Model, DataTypes } = require("sequelize");
+import pkg from "sequelize"
+const { Sequelize, Model, DataTypes } = pkg;
 // const sequelize = new Sequelize("sqlite::memory:");
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialectOptions: {
@@ -29,6 +31,4 @@ User.init(
 //   console.log(jane.toJSON());
 // })();
 
-module.exports = {
-  User,
-};
+export {User}

@@ -20,6 +20,4 @@ Comment.init(
   { sequelize, modelName: "comment" }
 );
 
-module.exports = {
-    Comment,
-};
+export {Comment}
